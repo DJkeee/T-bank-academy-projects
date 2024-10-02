@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.17.0">
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\Difficulty.java">
+<error line="10" column="1" severity="warning" message="Private ctor in non-final class. Inspect the code and make sure its intended." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\Game.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\hangman\Hangman.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\hangman\HangmanLogic.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\hangman\HangmanUI.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\DifficultyValidator.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\Input.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\LetterValidator.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\LivesIntervalValidator.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\ThemeValidator.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\input\Validator.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\Main.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\StringData.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\wordpick\WordPicker.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\wordpick\WordPickLogic.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\wordpick\WordPickUI.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\wordscollection\Word.java">
+</file>
+<file name="C:\Users\123\Documents\GitHub\backend_academy_2024_project_1-java-DJkeee-4\src\main\java\backend\academy\wordscollection\WordsList.java">
+</file>
+</checkstyle>

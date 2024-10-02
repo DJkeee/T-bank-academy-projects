@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HangmanLogic.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java</a> &gt; <a href="index.source.html" class="el_package">backend.academy.hangman</a> &gt; <span class="el_source">HangmanLogic.java</span></div><h1>HangmanLogic.java</h1><pre class="source lang-java linenums">package backend.academy.hangman;
+
+import backend.academy.wordscollection.Word;
+import java.util.HashSet;
+import java.util.Set;
+
+public final class HangmanLogic {
+    private final Word word;
+    private final Set&lt;Character&gt; guessedLetters;
+    private int lives;
+
+<span class="fc" id="L12">    public HangmanLogic(Word word, int initialLives) {</span>
+<span class="fc" id="L13">        this.word = word;</span>
+<span class="fc" id="L14">        this.lives = initialLives;</span>
+<span class="fc" id="L15">        this.guessedLetters = new HashSet&lt;&gt;();</span>
+<span class="fc" id="L16">    }</span>
+
+    public void guessLetter(char letter) {
+<span class="fc" id="L19">        guessedLetters.add(letter); // Добавляем букву</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        if (!isLetterInWord(letter)) {</span>
+<span class="nc" id="L21">            lives--;</span>
+        }
+<span class="fc" id="L23">    }</span>
+
+    public boolean isLetterInWord(Character letter) {
+<span class="fc" id="L26">        return word.getWord().toLowerCase().contains(String.valueOf(letter).toLowerCase());</span>
+    }
+
+    public int getLives() {
+<span class="nc" id="L30">        return this.lives;</span>
+    }
+
+    public Word getWord() {
+<span class="nc" id="L34">        return word;</span>
+    }
+
+    public boolean isPlayerWon() {
+<span class="fc" id="L38">        return getWordState().equals(word.getWord());</span>
+    }
+
+    public boolean isPlayerLost() {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        return lives == 0;</span>
+    }
+
+    public boolean isGameOver() {
+<span class="nc bnc" id="L46" title="All 4 branches missed.">        return isPlayerLost() || isPlayerWon();</span>
+    }
+
+    public String getWordState() {
+<span class="fc" id="L50">        StringBuilder wordState = new StringBuilder();</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (char ch : word.getWord().toCharArray()) {</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">            if (guessedLetters.contains(Character.toLowerCase(ch))) {</span>
+<span class="fc" id="L53">                wordState.append(ch);</span>
+            } else {
+<span class="fc" id="L55">                wordState.append('_'); //рисуем _ если букву не угадали</span>
+            }
+        }
+<span class="fc" id="L58">        return wordState.toString();</span>
+    }
+
+    public boolean hintRequest(char letter) {
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        return '+' == letter;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
